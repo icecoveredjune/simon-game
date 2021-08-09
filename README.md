@@ -2,6 +2,8 @@
 
 > JavaScript implementation of [Simon's game](<https://en.wikipedia.org/wiki/Simon_(game)>)
 
+## [Demo](https://icecoveredjune.github.io/simon-game/)
+
 ## Getting started
 
 ### Installation
