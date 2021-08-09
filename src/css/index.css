@@ -1,0 +1,72 @@
+@import url('normalize.css');
+@import url('vars.css');
+@import url('fonts.css');
+
+body {
+  height: 100vh;
+  font-family: 'Didact Gothic', sans-serif;
+}
+a {
+  color: #5fbbf9;
+  text-decoration: none;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  line-height: 1.4;
+}
+.hint {
+  font-size: 0.8em;
+  font-style: italic;
+}
+.game {
+  max-width: 300px;
+}
+.gameBtn,
+.startBtn,
+.difficult {
+  cursor: pointer;
+}
+.difficult,
+.gameBtn {
+  opacity: var(--inactive-opacity);
+}
+circle:nth-of-type(4) {
+  opacity: 1;
+}
+
+.disabled {
+  pointer-events: none;
+  user-select: none;
+}
+text,
+.notification,
+h1 {
+  user-select: none;
+}
+.notification {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+  text-align: center;
+  font-size: var(--error-notification-font-size);
+  height: var(--error-notification-font-size);
+}
+.notification.visible {
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (max-height: 500px) {
+  h1 {
+    display: none;
+  }
+  .container {
+    justify-content: unset;
+    line-height: 1.15;
+  }
+}
